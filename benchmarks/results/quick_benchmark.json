@@ -1,0 +1,169 @@
+{
+  "mode": "quick",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "stim": "1.16.0",
+    "ldpc": "2.4.1"
+  },
+  "build_sha256": "1b041a6de260cda420e5aaefb35f125e6365a725e3e29c2fd9240750c06e0221",
+  "rows": [
+    {
+      "circuit": "n56-r4-p0.002.stim",
+      "shots": 4,
+      "seed": 706135848945941165,
+      "circuit_sha256": "09d259dff79b22f48b953ae7aa81b989ff64eef2721241ab8bed31c1bbd66b10",
+      "syndrome_sha256": "7f272ff5205c97d50233e38bc30109c3f3451b8f1456e1f9b588d1e954cf2dde",
+      "truth_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957",
+      "detectors": 224,
+      "mechanisms": 7784,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.02537549997214228,
+          "decode_cpu_s": 0.550203,
+          "wall_this_invocation_s": 0.5504674999974668,
+          "us_per_shot": 137550.75,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957"
+        },
+        "ldpc7": {
+          "setup_s": 0.020391875063069165,
+          "decode_cpu_s": 0.538287,
+          "wall_this_invocation_s": 0.5383329170290381,
+          "us_per_shot": 134571.75,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0030027080792933702,
+          "decode_cpu_s": 0.005688000000000137,
+          "us_per_shot": 1422.0000000000343,
+          "prediction_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.0011039170203730464,
+          "decode_cpu_s": 0.00017100000000014326,
+          "us_per_shot": 42.75000000003581,
+          "prediction_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0008939160034060478,
+          "decode_cpu_s": 0.0003109999999999502,
+          "us_per_shot": 77.74999999998755,
+          "prediction_sha256": "9b405180d6db0d8476aef89824a432ccf7c4b7721a360ba80b2cb4bca9089957"
+        }
+      },
+      "scalar_batch_disagreements": 0
+    },
+    {
+      "circuit": "n60-nonabelian-r4-p0.002.stim",
+      "shots": 4,
+      "seed": 644207687965284036,
+      "circuit_sha256": "cbcc386197e2e064580920d450973af3b7946fcb49f5dec14e121fe53e76f248",
+      "syndrome_sha256": "6551989f3039c5c3b86313ac944b38370a7fc51d943618b10db074f2953c6b27",
+      "truth_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461",
+      "detectors": 240,
+      "mechanisms": 8715,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.04772416700143367,
+          "decode_cpu_s": 0.763368,
+          "wall_this_invocation_s": 0.7642914169700816,
+          "us_per_shot": 190842.0,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461"
+        },
+        "ldpc7": {
+          "setup_s": 0.03899212507531047,
+          "decode_cpu_s": 0.7675550000000002,
+          "wall_this_invocation_s": 0.7687679169466719,
+          "us_per_shot": 191888.75000000006,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0012272500898689032,
+          "decode_cpu_s": 0.005523999999999862,
+          "us_per_shot": 1380.9999999999657,
+          "prediction_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.0014973749639466405,
+          "decode_cpu_s": 0.00019799999999969842,
+          "us_per_shot": 49.499999999924604,
+          "prediction_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.001229209010489285,
+          "decode_cpu_s": 0.00021700000000013375,
+          "us_per_shot": 54.25000000003344,
+          "prediction_sha256": "0a97b6874da657c3ca111c59d28ed10eec9e34d7aebb03b1f0748b36a302c461"
+        }
+      },
+      "scalar_batch_disagreements": 0
+    },
+    {
+      "circuit": "ibm72-published-r4-p0.002.stim",
+      "shots": 4,
+      "seed": 332093727156224774,
+      "circuit_sha256": "1b12bd10de1fe0393c5706c3269c6026a3a9c9dc1e28eb928c28dcd9fc9bbd5f",
+      "syndrome_sha256": "5bd664fcf6702a3d530aae586d88095ca0be337299c96296b6a5e0390be66437",
+      "truth_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0",
+      "detectors": 288,
+      "mechanisms": 10260,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.07047970907296985,
+          "decode_cpu_s": 0.3702190000000001,
+          "wall_this_invocation_s": 0.37080429203342646,
+          "us_per_shot": 92554.75000000001,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0"
+        },
+        "ldpc7": {
+          "setup_s": 0.07146658399142325,
+          "decode_cpu_s": 0.35864399999999996,
+          "wall_this_invocation_s": 0.3586841670330614,
+          "us_per_shot": 89660.99999999999,
+          "workers": 1,
+          "errors": 0,
+          "prediction_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0013527090195566416,
+          "decode_cpu_s": 0.003554000000000279,
+          "us_per_shot": 888.5000000000698,
+          "prediction_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.001948834047652781,
+          "decode_cpu_s": 0.00021100000000018326,
+          "us_per_shot": 52.750000000045816,
+          "prediction_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0017085000872612,
+          "decode_cpu_s": 0.000236000000000125,
+          "us_per_shot": 59.00000000003125,
+          "prediction_sha256": "02eea410d5a7f662cb8160299d2500010b663f420661290566eb298565e7c6e0"
+        }
+      },
+      "scalar_batch_disagreements": 0
+    }
+  ]
+}

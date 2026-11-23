@@ -1,0 +1,7 @@
+/build/
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+/proofs/.lake/
+/benchmarks/results/*.partial.json

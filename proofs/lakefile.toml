@@ -1,0 +1,10 @@
+name = "zero-idle-qldpc-proofs"
+version = "0.1.0"
+defaultTargets = ["ZeroIdleQldpc", "verify-proofs"]
+
+[[lean_lib]]
+name = "ZeroIdleQldpc"
+
+[[lean_exe]]
+name = "verify-proofs"
+root = "Main"

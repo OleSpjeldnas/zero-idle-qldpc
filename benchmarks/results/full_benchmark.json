@@ -1,0 +1,975 @@
+{
+  "mode": "full",
+  "shots_per_circuit": 10000,
+  "circuits_evaluated": 22,
+  "total_cpp_shots_per_arm": 220000,
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "versions": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "stim": "1.16.0",
+    "ldpc": "2.4.1"
+  },
+  "rows": [
+    {
+      "circuit": "n56-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 224,
+      "observables": 6,
+      "mechanisms": 7784,
+      "circuit_sha256": "3d62fe36f47007a20e579c1aff8ff3973e163d98421d83eaf29f96bfbdbaa8a4",
+      "syndrome_sha256": "ddcf60c0be37e8762d953cd7b06d03063127a9245346e2c9294f59ad19393cae",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.022984542069025338,
+          "decode_cpu_s": 424.61124600000005,
+          "wall_this_invocation_s": 7.016452000010759,
+          "us_per_shot": 42461.1246,
+          "workers": 6,
+          "errors": 2,
+          "prediction_sha256": "6d25d4979835f6e4f7efd10c49a95d39a3a84c90a562591d20dbc9b4b51545f4"
+        },
+        "ldpc7": {
+          "setup_s": 0.021363665931858122,
+          "decode_cpu_s": 443.98513299999996,
+          "wall_this_invocation_s": 59.11801741702948,
+          "us_per_shot": 44398.51329999999,
+          "workers": 8,
+          "errors": 2,
+          "prediction_sha256": "6d25d4979835f6e4f7efd10c49a95d39a3a84c90a562591d20dbc9b4b51545f4"
+        },
+        "reference": {
+          "errors": 4,
+          "setup_s": 0.0034666670253500342,
+          "decode_cpu_s": 7.874887999999999,
+          "us_per_shot": 787.4887999999999,
+          "prediction_sha256": "f7ea01cb3a0ea7a06c0307402b03f79b94f4f0892c6b57e45012ab071e9c71b4"
+        },
+        "scalar": {
+          "errors": 2,
+          "setup_s": 0.0023416249314323068,
+          "decode_cpu_s": 0.13189099999999954,
+          "us_per_shot": 13.189099999999954,
+          "prediction_sha256": "68066247e80f75fc67f47e9bfd1e5788da405d3934a926a4cb33fc6b1eb8ac4e"
+        },
+        "batch": {
+          "errors": 2,
+          "setup_s": 0.0011423330288380384,
+          "decode_cpu_s": 0.09308999999999834,
+          "us_per_shot": 9.308999999999834,
+          "prediction_sha256": "68066247e80f75fc67f47e9bfd1e5788da405d3934a926a4cb33fc6b1eb8ac4e"
+        }
+      }
+    },
+    {
+      "circuit": "n56-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 224,
+      "observables": 6,
+      "mechanisms": 7784,
+      "circuit_sha256": "09d259dff79b22f48b953ae7aa81b989ff64eef2721241ab8bed31c1bbd66b10",
+      "syndrome_sha256": "3c65ad83930de55b26b995bcf715b557a92735f091d62f9a7c57453480f59e7b",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.0213591669453308,
+          "decode_cpu_s": 884.143821,
+          "wall_this_invocation_s": 117.73255595797673,
+          "us_per_shot": 88414.3821,
+          "workers": 8,
+          "errors": 8,
+          "prediction_sha256": "7a72948caceb43d9c50aa436c374446d72dea5cfcc708d735c16ebf2135b6d6e"
+        },
+        "ldpc7": {
+          "setup_s": 0.0303670420544222,
+          "decode_cpu_s": 919.7742280000001,
+          "wall_this_invocation_s": 131.39607308304403,
+          "us_per_shot": 91977.42280000001,
+          "workers": 8,
+          "errors": 8,
+          "prediction_sha256": "7a72948caceb43d9c50aa436c374446d72dea5cfcc708d735c16ebf2135b6d6e"
+        },
+        "reference": {
+          "errors": 34,
+          "setup_s": 0.0010370829841122031,
+          "decode_cpu_s": 11.759614,
+          "us_per_shot": 1175.9614,
+          "prediction_sha256": "11a7392cf652e7437f4e5502be26f6727b8091bdabe99ce105420d5859d6ffbe"
+        },
+        "scalar": {
+          "errors": 12,
+          "setup_s": 0.006264458992518485,
+          "decode_cpu_s": 0.42685200000000023,
+          "us_per_shot": 42.68520000000002,
+          "prediction_sha256": "3a666fac21a3db74a3f0f8a1c20f6450a1c34c58e6c2ec2c4a46b9125ebe4ec6"
+        },
+        "batch": {
+          "errors": 12,
+          "setup_s": 0.0012783330166712403,
+          "decode_cpu_s": 0.3402780000000014,
+          "us_per_shot": 34.02780000000014,
+          "prediction_sha256": "3a666fac21a3db74a3f0f8a1c20f6450a1c34c58e6c2ec2c4a46b9125ebe4ec6"
+        }
+      }
+    },
+    {
+      "circuit": "n60-archive-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 240,
+      "observables": 8,
+      "mechanisms": 8640,
+      "circuit_sha256": "4d3b59691eb3419c53afb96c59c92ef1f8a7ba7999c2bdb0f4c7ec8289a06d80",
+      "syndrome_sha256": "7e76724fac68cea6fb94a96f48f719620725ea72701706a4daf706de734924fd",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.04609720909502357,
+          "decode_cpu_s": 720.2791390000002,
+          "wall_this_invocation_s": 111.68851595802698,
+          "us_per_shot": 72027.91390000003,
+          "workers": 8,
+          "errors": 1,
+          "prediction_sha256": "05c9ccbbb56bde78b4a115e70cd1bbfd8703b861c22001fc5733156151f8c140"
+        },
+        "ldpc7": {
+          "setup_s": 0.05052837508264929,
+          "decode_cpu_s": 719.8816249999995,
+          "wall_this_invocation_s": 108.33914037491195,
+          "us_per_shot": 71988.16249999995,
+          "workers": 8,
+          "errors": 1,
+          "prediction_sha256": "05c9ccbbb56bde78b4a115e70cd1bbfd8703b861c22001fc5733156151f8c140"
+        },
+        "reference": {
+          "errors": 4,
+          "setup_s": 0.0018805420259013772,
+          "decode_cpu_s": 10.062850999999998,
+          "us_per_shot": 1006.2850999999998,
+          "prediction_sha256": "b64a4641aa0999f3a5fd1a16cbc277d56781f8daa0ebcabd1d2c13f5d40f9875"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.002355167060159147,
+          "decode_cpu_s": 0.16593199999999797,
+          "us_per_shot": 16.593199999999797,
+          "prediction_sha256": "fd667ddf81f6167c2d3dfad72c979b5e4604aeee9e44902d631d05ecdf9889af"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0012944999616593122,
+          "decode_cpu_s": 0.12851900000000072,
+          "us_per_shot": 12.851900000000072,
+          "prediction_sha256": "fd667ddf81f6167c2d3dfad72c979b5e4604aeee9e44902d631d05ecdf9889af"
+        }
+      }
+    },
+    {
+      "circuit": "n60-archive-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 240,
+      "observables": 8,
+      "mechanisms": 8640,
+      "circuit_sha256": "58f8ab8f4e95ce63f00ea23b625d01d104fdd273b43ea7d5fbd657ba01d48d49",
+      "syndrome_sha256": "b7271507f988d225fd2cf5c4dc001b295dea05b175698e228b7b785101625436",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.047459208057262,
+          "decode_cpu_s": 1557.5439520000002,
+          "wall_this_invocation_s": 235.87400162499398,
+          "us_per_shot": 155754.39520000003,
+          "workers": 8,
+          "errors": 11,
+          "prediction_sha256": "7904994f0823f92d622954172919d6729d089538b4d1b78926179c7e31863e82"
+        },
+        "ldpc7": {
+          "setup_s": 0.048682042048312724,
+          "decode_cpu_s": 1567.537159,
+          "wall_this_invocation_s": 244.34172741696239,
+          "us_per_shot": 156753.7159,
+          "workers": 8,
+          "errors": 11,
+          "prediction_sha256": "7904994f0823f92d622954172919d6729d089538b4d1b78926179c7e31863e82"
+        },
+        "reference": {
+          "errors": 49,
+          "setup_s": 0.001291458960622549,
+          "decode_cpu_s": 15.783372,
+          "us_per_shot": 1578.3372,
+          "prediction_sha256": "edcf21ab26b56ff80dbc3e22de444e14712237fbf5e1eec902fcd5389cecf4ea"
+        },
+        "scalar": {
+          "errors": 9,
+          "setup_s": 0.002294749952852726,
+          "decode_cpu_s": 0.49756,
+          "us_per_shot": 49.756,
+          "prediction_sha256": "82476d6bfc10f0bd1529e42cfcaafe95f9ab270bdc893fe63d11cdb486cbc85b"
+        },
+        "batch": {
+          "errors": 9,
+          "setup_s": 0.001291792024858296,
+          "decode_cpu_s": 0.4685170000000056,
+          "us_per_shot": 46.85170000000056,
+          "prediction_sha256": "82476d6bfc10f0bd1529e42cfcaafe95f9ab270bdc893fe63d11cdb486cbc85b"
+        }
+      }
+    },
+    {
+      "circuit": "n60-nonabelian-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 240,
+      "observables": 8,
+      "mechanisms": 8715,
+      "circuit_sha256": "feb100a30dd898f4784c76c0840ddd102a36ffda3b46bcc200ab27ac3514e82e",
+      "syndrome_sha256": "52d4df845f309b34bce4b44d41d858fede17e8ea7fa5638c4ab34fe285316d51",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.043483458925038576,
+          "decode_cpu_s": 741.0711830000001,
+          "wall_this_invocation_s": 128.49236416607164,
+          "us_per_shot": 74107.11830000002,
+          "workers": 8,
+          "errors": 1,
+          "prediction_sha256": "d20b446f212332017f53b2a0f5bb953c61fc1fdaddc2b2005d29cb4bf8a4ad8f"
+        },
+        "ldpc7": {
+          "setup_s": 0.04481783299706876,
+          "decode_cpu_s": 728.6584969999999,
+          "wall_this_invocation_s": 114.40502079098951,
+          "us_per_shot": 72865.84969999999,
+          "workers": 8,
+          "errors": 1,
+          "prediction_sha256": "d20b446f212332017f53b2a0f5bb953c61fc1fdaddc2b2005d29cb4bf8a4ad8f"
+        },
+        "reference": {
+          "errors": 6,
+          "setup_s": 0.001241333899088204,
+          "decode_cpu_s": 9.598612000000003,
+          "us_per_shot": 959.8612000000004,
+          "prediction_sha256": "aa48e8a1f14316d9fbccabcc365bd85ba8949082438aff9f7d5dd980edb5d486"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.002547207986935973,
+          "decode_cpu_s": 0.181047999999997,
+          "us_per_shot": 18.1047999999997,
+          "prediction_sha256": "a770f6d531b4e4afeaa894e62b7207585ae7197eef189e5d4ff9ca6b1343eafc"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0015336250653490424,
+          "decode_cpu_s": 0.15326500000000465,
+          "us_per_shot": 15.326500000000467,
+          "prediction_sha256": "a770f6d531b4e4afeaa894e62b7207585ae7197eef189e5d4ff9ca6b1343eafc"
+        }
+      }
+    },
+    {
+      "circuit": "n60-nonabelian-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 240,
+      "observables": 8,
+      "mechanisms": 8715,
+      "circuit_sha256": "cbcc386197e2e064580920d450973af3b7946fcb49f5dec14e121fe53e76f248",
+      "syndrome_sha256": "0657d89706e6b2bd433e2d1375fc956f4fb363c584673c491706ce96cd5bbb03",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.04816995793953538,
+          "decode_cpu_s": 1543.8966530000005,
+          "wall_this_invocation_s": 227.38791549997404,
+          "us_per_shot": 154389.66530000005,
+          "workers": 8,
+          "errors": 18,
+          "prediction_sha256": "69bd0e573c856db2a95cbd53b79563f305b8ae11f6ea0e1486cc34124b5ef1d5"
+        },
+        "ldpc7": {
+          "setup_s": 0.04712770797777921,
+          "decode_cpu_s": 1548.2083670000002,
+          "wall_this_invocation_s": 209.93824287492316,
+          "us_per_shot": 154820.8367,
+          "workers": 8,
+          "errors": 18,
+          "prediction_sha256": "69bd0e573c856db2a95cbd53b79563f305b8ae11f6ea0e1486cc34124b5ef1d5"
+        },
+        "reference": {
+          "errors": 71,
+          "setup_s": 0.0021110830130055547,
+          "decode_cpu_s": 16.337288,
+          "us_per_shot": 1633.7288,
+          "prediction_sha256": "d47a35f1a420977a0246c92b33dc04255dee11aa36574330e011904be2405618"
+        },
+        "scalar": {
+          "errors": 16,
+          "setup_s": 0.0026218330021947622,
+          "decode_cpu_s": 0.5420179999999988,
+          "us_per_shot": 54.201799999999885,
+          "prediction_sha256": "7f406007448688843fadbd14061f304a05fa0568d6696f84068103e117db5b83"
+        },
+        "batch": {
+          "errors": 16,
+          "setup_s": 0.001519499928690493,
+          "decode_cpu_s": 0.49654099999999346,
+          "us_per_shot": 49.654099999999346,
+          "prediction_sha256": "7f406007448688843fadbd14061f304a05fa0568d6696f84068103e117db5b83"
+        }
+      }
+    },
+    {
+      "circuit": "n70-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 280,
+      "observables": 6,
+      "mechanisms": 9660,
+      "circuit_sha256": "3f4f2f7785d64ec77da69d4f80e744210875f80a267e6476015e401d2aa5a220",
+      "syndrome_sha256": "a0ed06ef8caf7dd35bab71fb363662798bc19bcc17dbcdf02562548b268ce279",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.056230041896924376,
+          "decode_cpu_s": 2202.416777,
+          "wall_this_invocation_s": 350.59547504095826,
+          "us_per_shot": 220241.6777,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "93e5e52229aee1bcb04b365dfa387315cefb5ad459f868a10424133f3ff8cd59"
+        },
+        "ldpc7": {
+          "setup_s": 0.057512916973792017,
+          "decode_cpu_s": 2101.957928000001,
+          "wall_this_invocation_s": 204.57525283296127,
+          "us_per_shot": 210195.7928000001,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "93e5e52229aee1bcb04b365dfa387315cefb5ad459f868a10424133f3ff8cd59"
+        },
+        "reference": {
+          "errors": 11,
+          "setup_s": 0.003077375004068017,
+          "decode_cpu_s": 17.521063999999996,
+          "us_per_shot": 1752.1063999999997,
+          "prediction_sha256": "9da7a278c41d9fbe79da70a8acc5604c5d40010056a52f06646431c69630b603"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.004258207976818085,
+          "decode_cpu_s": 0.41743599999999503,
+          "us_per_shot": 41.7435999999995,
+          "prediction_sha256": "93e5e52229aee1bcb04b365dfa387315cefb5ad459f868a10424133f3ff8cd59"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0018326248973608017,
+          "decode_cpu_s": 0.367447999999996,
+          "us_per_shot": 36.7447999999996,
+          "prediction_sha256": "93e5e52229aee1bcb04b365dfa387315cefb5ad459f868a10424133f3ff8cd59"
+        }
+      }
+    },
+    {
+      "circuit": "n70-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 280,
+      "observables": 6,
+      "mechanisms": 9660,
+      "circuit_sha256": "f72d3a5afc01151294cdc01592fa57d26eff6b2fba8a9d70ba43f584e74e7e99",
+      "syndrome_sha256": "744476e7a4318cc9737e9e8bd1b71eab0272f88c9a6ae4c607390f9f8d05f0e4",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.05566458299290389,
+          "decode_cpu_s": 4183.477524999998,
+          "wall_this_invocation_s": 588.8547783750109,
+          "us_per_shot": 418347.7524999999,
+          "workers": 8,
+          "errors": 32,
+          "prediction_sha256": "09352dcdf40753c8c7595720e11d14f318ac4117375c48c57385d29b0e653cc0"
+        },
+        "ldpc7": {
+          "setup_s": 0.05541379190981388,
+          "decode_cpu_s": 4161.536274,
+          "wall_this_invocation_s": 579.1901256249985,
+          "us_per_shot": 416153.6274,
+          "workers": 8,
+          "errors": 32,
+          "prediction_sha256": "09352dcdf40753c8c7595720e11d14f318ac4117375c48c57385d29b0e653cc0"
+        },
+        "reference": {
+          "errors": 242,
+          "setup_s": 0.01916525000706315,
+          "decode_cpu_s": 26.868362999999988,
+          "us_per_shot": 2686.836299999999,
+          "prediction_sha256": "92c97a62bcc3ad4781ef40024b3c1e8994a1d8210706e40d27e1b097068a53db"
+        },
+        "scalar": {
+          "errors": 16,
+          "setup_s": 0.005318333976902068,
+          "decode_cpu_s": 1.6860250000000008,
+          "us_per_shot": 168.60250000000008,
+          "prediction_sha256": "71811c470c7d851ff93beb5affca06020a873d820fb2fc909deb22be08de40e3"
+        },
+        "batch": {
+          "errors": 16,
+          "setup_s": 0.001805042033083737,
+          "decode_cpu_s": 1.6010849999999976,
+          "us_per_shot": 160.10849999999976,
+          "prediction_sha256": "71811c470c7d851ff93beb5affca06020a873d820fb2fc909deb22be08de40e3"
+        }
+      }
+    },
+    {
+      "circuit": "n84-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 336,
+      "observables": 8,
+      "mechanisms": 11676,
+      "circuit_sha256": "d109440bb99564ddc9f0fda8bb80a49e1d8a4318ac5d65b2294bef1ee734fc12",
+      "syndrome_sha256": "eeb51f33d6a9c596fe66f4d169c0437f3233849c2cab033c4b803ce95dd5ec9a",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.06912775000091642,
+          "decode_cpu_s": 912.4091109999999,
+          "wall_this_invocation_s": 130.4442429159535,
+          "us_per_shot": 91240.91109999998,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "cbcd687f10a6cce1e91c00ab1e6b8537ddfacddead1644a7f5a979f692aaaa2f"
+        },
+        "ldpc7": {
+          "setup_s": 0.04435741691850126,
+          "decode_cpu_s": 909.4174220000001,
+          "wall_this_invocation_s": 127.95442045794334,
+          "us_per_shot": 90941.74220000001,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "cbcd687f10a6cce1e91c00ab1e6b8537ddfacddead1644a7f5a979f692aaaa2f"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0021415420342236757,
+          "decode_cpu_s": 11.373196000000007,
+          "us_per_shot": 1137.3196000000007,
+          "prediction_sha256": "cbcd687f10a6cce1e91c00ab1e6b8537ddfacddead1644a7f5a979f692aaaa2f"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.0025140000507235527,
+          "decode_cpu_s": 0.18629300000000626,
+          "us_per_shot": 18.629300000000626,
+          "prediction_sha256": "cbcd687f10a6cce1e91c00ab1e6b8537ddfacddead1644a7f5a979f692aaaa2f"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0013849999522790313,
+          "decode_cpu_s": 0.14218000000002462,
+          "us_per_shot": 14.218000000002462,
+          "prediction_sha256": "cbcd687f10a6cce1e91c00ab1e6b8537ddfacddead1644a7f5a979f692aaaa2f"
+        }
+      }
+    },
+    {
+      "circuit": "n84-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 336,
+      "observables": 8,
+      "mechanisms": 11676,
+      "circuit_sha256": "2c46ecfd965fd327392fff09c91e313cfaffa0cfca4eb7c3e8d4d14c200f6cf3",
+      "syndrome_sha256": "f02aa4bb6af931c369075e09b3c38769c00b1d719e91bd225ce40a22650b4e5f",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.03865337499883026,
+          "decode_cpu_s": 1810.3805389999998,
+          "wall_this_invocation_s": 250.4585059999954,
+          "us_per_shot": 181038.05389999997,
+          "workers": 8,
+          "errors": 5,
+          "prediction_sha256": "a67ee1ded99cc4da4d76d81f7e9a61dfa0267391ca078636bd58d3f9471f337f"
+        },
+        "ldpc7": {
+          "setup_s": 0.04104066698346287,
+          "decode_cpu_s": 1827.7095479999994,
+          "wall_this_invocation_s": 257.114621500019,
+          "us_per_shot": 182770.95479999992,
+          "workers": 8,
+          "errors": 5,
+          "prediction_sha256": "a67ee1ded99cc4da4d76d81f7e9a61dfa0267391ca078636bd58d3f9471f337f"
+        },
+        "reference": {
+          "errors": 28,
+          "setup_s": 0.014539791969582438,
+          "decode_cpu_s": 20.01112600000002,
+          "us_per_shot": 2001.112600000002,
+          "prediction_sha256": "fc852952c8225e51500a77888537e2729d6c0e6e42871f7c79e410d59e4aa9d2"
+        },
+        "scalar": {
+          "errors": 8,
+          "setup_s": 0.010625583934597671,
+          "decode_cpu_s": 0.6103659999999991,
+          "us_per_shot": 61.03659999999991,
+          "prediction_sha256": "ac106a408d59ed100d0a423e088c34cf7e70795d7d75fa183dbb995d4195830a"
+        },
+        "batch": {
+          "errors": 8,
+          "setup_s": 0.001507165958173573,
+          "decode_cpu_s": 0.5152149999999835,
+          "us_per_shot": 51.521499999998355,
+          "prediction_sha256": "ac106a408d59ed100d0a423e088c34cf7e70795d7d75fa183dbb995d4195830a"
+        }
+      }
+    },
+    {
+      "circuit": "n96-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 384,
+      "observables": 8,
+      "mechanisms": 13824,
+      "circuit_sha256": "d18b612b93c5b8dc9eb0a9abcfc50a57b74d122357d57f10401e0fc5ed68bb55",
+      "syndrome_sha256": "e59b412806d68d5026bc80d1e6954c218c4661412f1a7ca693ffb135ca7f8f06",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.13270624994765967,
+          "decode_cpu_s": 1308.8197219999997,
+          "wall_this_invocation_s": 183.84082604199648,
+          "us_per_shot": 130881.97219999997,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "a80eaa384c1906fc92b7e470decfb43a57ff5dc045ffb4251a0f154f03b1a3d0"
+        },
+        "ldpc7": {
+          "setup_s": 0.1009480410721153,
+          "decode_cpu_s": 1286.1252729999999,
+          "wall_this_invocation_s": 175.27607979206368,
+          "us_per_shot": 128612.52729999997,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "a80eaa384c1906fc92b7e470decfb43a57ff5dc045ffb4251a0f154f03b1a3d0"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0037825420731678605,
+          "decode_cpu_s": 16.100808999999998,
+          "us_per_shot": 1610.0808999999997,
+          "prediction_sha256": "a80eaa384c1906fc92b7e470decfb43a57ff5dc045ffb4251a0f154f03b1a3d0"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.0034811670193448663,
+          "decode_cpu_s": 0.24191499999997745,
+          "us_per_shot": 24.191499999997745,
+          "prediction_sha256": "a80eaa384c1906fc92b7e470decfb43a57ff5dc045ffb4251a0f154f03b1a3d0"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.0018102499889209867,
+          "decode_cpu_s": 0.20238800000001334,
+          "us_per_shot": 20.238800000001334,
+          "prediction_sha256": "a80eaa384c1906fc92b7e470decfb43a57ff5dc045ffb4251a0f154f03b1a3d0"
+        }
+      }
+    },
+    {
+      "circuit": "n96-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 384,
+      "observables": 8,
+      "mechanisms": 13824,
+      "circuit_sha256": "06e9a85260794a78780e38965955fed4de8870df8344afaea0c126c4329d91d4",
+      "syndrome_sha256": "11591cc1c20f010bf0e2fc906bc2b3fe1668cd378e6058f07feb8dd98daeb4ee",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 0.18613070796709508,
+          "decode_cpu_s": 3156.900657000001,
+          "wall_this_invocation_s": 430.0013877910096,
+          "us_per_shot": 315690.0657000001,
+          "workers": 8,
+          "errors": 7,
+          "prediction_sha256": "d20b0966e2a35a498045715bb398425bfea2104439ed0085701af4696ffef685"
+        },
+        "ldpc7": {
+          "setup_s": 0.10466820909641683,
+          "decode_cpu_s": 3142.8263879999995,
+          "wall_this_invocation_s": 423.67269570799544,
+          "us_per_shot": 314282.63879999996,
+          "workers": 8,
+          "errors": 7,
+          "prediction_sha256": "d20b0966e2a35a498045715bb398425bfea2104439ed0085701af4696ffef685"
+        },
+        "reference": {
+          "errors": 5,
+          "setup_s": 0.006392667070031166,
+          "decode_cpu_s": 27.000517000000002,
+          "us_per_shot": 2700.0517000000004,
+          "prediction_sha256": "769502b7a736912dea8f818ce4c39462f33dc391c3c217abf81d65aed47771f0"
+        },
+        "scalar": {
+          "errors": 1,
+          "setup_s": 0.003916874993592501,
+          "decode_cpu_s": 0.7496590000000083,
+          "us_per_shot": 74.96590000000083,
+          "prediction_sha256": "4663724d78e779d3d1b7af541c0ca82dbee862b98ddf15b19eb0f8704ee1065f"
+        },
+        "batch": {
+          "errors": 1,
+          "setup_s": 0.0018723750254139304,
+          "decode_cpu_s": 0.637771999999984,
+          "us_per_shot": 63.7771999999984,
+          "prediction_sha256": "4663724d78e779d3d1b7af541c0ca82dbee862b98ddf15b19eb0f8704ee1065f"
+        }
+      }
+    },
+    {
+      "circuit": "ibm144-published-r12-p0.001.stim",
+      "shots": 10000,
+      "detectors": 1728,
+      "observables": 12,
+      "mechanisms": 67752,
+      "circuit_sha256": "718b3ba3078fe4908ba08b4cd945a8094cf1465927124009e4ed5cfc7ba74575",
+      "syndrome_sha256": "209a79493fca22ef0013a9b4a3d723fb9f0e004856cf0e0643583c356834f92d",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "ldpc2": {
+          "setup_s": 2.238354125060141,
+          "decode_cpu_s": 22194.224316999997,
+          "wall_this_invocation_s": 3177.5908846249804,
+          "us_per_shot": 2219422.4316999996,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "a36841107fa6cdc9098e1d298b91e6011e6923488167aeef274ca6582d99390a"
+        },
+        "ldpc7": {
+          "setup_s": 3.269522499991581,
+          "decode_cpu_s": 22628.818749000024,
+          "wall_this_invocation_s": 3602.272909332998,
+          "us_per_shot": 2262881.8749000025,
+          "workers": 8,
+          "errors": 0,
+          "prediction_sha256": "a36841107fa6cdc9098e1d298b91e6011e6923488167aeef274ca6582d99390a"
+        },
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0094682079507038,
+          "decode_cpu_s": 247.114302,
+          "us_per_shot": 24711.4302,
+          "prediction_sha256": "a36841107fa6cdc9098e1d298b91e6011e6923488167aeef274ca6582d99390a"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.020891916938126087,
+          "decode_cpu_s": 2.4260689999999983,
+          "us_per_shot": 242.60689999999983,
+          "prediction_sha256": "a36841107fa6cdc9098e1d298b91e6011e6923488167aeef274ca6582d99390a"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.012928208918310702,
+          "decode_cpu_s": 2.1100199999999987,
+          "us_per_shot": 211.00199999999987,
+          "prediction_sha256": "a36841107fa6cdc9098e1d298b91e6011e6923488167aeef274ca6582d99390a"
+        }
+      }
+    },
+    {
+      "circuit": "ibm144-published-r12-p0.002.stim",
+      "shots": 10000,
+      "detectors": 1728,
+      "observables": 12,
+      "mechanisms": 67752,
+      "circuit_sha256": "76f400f938b24102c22e7eefbe7771bddcf5647e938edc598af089355bc20bec",
+      "syndrome_sha256": "a940fafe41e4412d62573cf77a3e32c4d5e0e65aa2d613ee8707d677624df7b6",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 5,
+          "setup_s": 0.03683454205747694,
+          "decode_cpu_s": 298.2035209999999,
+          "us_per_shot": 29820.35209999999,
+          "prediction_sha256": "1d01725cad60ccfbfcbdec17e928ce0320c5fe8269c97b45acc0a93a25edead1"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.011918665957637131,
+          "decode_cpu_s": 17.950201000000003,
+          "us_per_shot": 1795.0201000000004,
+          "prediction_sha256": "809ce138b5fd3a8fde2ac57d6f6812ab2dceb13fffe4823b5aa6178ce53e1d2e"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.016312625026330352,
+          "decode_cpu_s": 18.569725000000005,
+          "us_per_shot": 1856.9725000000003,
+          "prediction_sha256": "809ce138b5fd3a8fde2ac57d6f6812ab2dceb13fffe4823b5aa6178ce53e1d2e"
+        }
+      }
+    },
+    {
+      "circuit": "ibm144-published-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 576,
+      "observables": 12,
+      "mechanisms": 20520,
+      "circuit_sha256": "f60f90a9114b5fdaef7a270428145eededb7a28c9a3020f6a3eac2845173c24a",
+      "syndrome_sha256": "4597854a9f58e7b7e18bf758c3e745db055ebe3ceec8b40a961695930a07b03a",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.002765124896541238,
+          "decode_cpu_s": 45.58099000000004,
+          "us_per_shot": 4558.099000000005,
+          "prediction_sha256": "805f039d0cf157d5ecc1ce53f749b17819ec6ca4b169d4c748d139d15df66482"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.004649540991522372,
+          "decode_cpu_s": 0.4562310000000025,
+          "us_per_shot": 45.62310000000025,
+          "prediction_sha256": "805f039d0cf157d5ecc1ce53f749b17819ec6ca4b169d4c748d139d15df66482"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.002312667085789144,
+          "decode_cpu_s": 0.38005199999999917,
+          "us_per_shot": 38.00519999999992,
+          "prediction_sha256": "805f039d0cf157d5ecc1ce53f749b17819ec6ca4b169d4c748d139d15df66482"
+        }
+      }
+    },
+    {
+      "circuit": "ibm144-published-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 576,
+      "observables": 12,
+      "mechanisms": 20520,
+      "circuit_sha256": "9693b73d8b3591bdd7853153d5d06f0d355573ecd9c291f574dcc723c556dcbb",
+      "syndrome_sha256": "2c6bd7f1e9719496b711cde42bd34f517aeff6e5111a447bfea0db0901e30a5a",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.00502849998883903,
+          "decode_cpu_s": 70.99879499999997,
+          "us_per_shot": 7099.879499999997,
+          "prediction_sha256": "835b95229394b9ed909b3c5ed1e7784fd5021acaab294114a27baeb9f8062e15"
+        },
+        "scalar": {
+          "errors": 0,
+          "setup_s": 0.0027334169717505574,
+          "decode_cpu_s": 1.7695250000000016,
+          "us_per_shot": 176.95250000000016,
+          "prediction_sha256": "835b95229394b9ed909b3c5ed1e7784fd5021acaab294114a27baeb9f8062e15"
+        },
+        "batch": {
+          "errors": 0,
+          "setup_s": 0.00253183301538229,
+          "decode_cpu_s": 1.4963529999999992,
+          "us_per_shot": 149.63529999999992,
+          "prediction_sha256": "835b95229394b9ed909b3c5ed1e7784fd5021acaab294114a27baeb9f8062e15"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-published-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10260,
+      "circuit_sha256": "c8ad7b3adddea297f41961e9a26e276e55caec3d00670044f2a3451bfcf2fc27",
+      "syndrome_sha256": "6695fb6714cb29f2d426c04d2560a11752f8d75a30445f2f9c76687767555f8c",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 1,
+          "setup_s": 0.0031309169717133045,
+          "decode_cpu_s": 16.140354000000002,
+          "us_per_shot": 1614.0354000000002,
+          "prediction_sha256": "692a8fe14a1b8238d8c909dee7597c561701932f440b54ac2b11701cbc2d0a4c"
+        },
+        "scalar": {
+          "errors": 1,
+          "setup_s": 0.002898958045989275,
+          "decode_cpu_s": 0.20756300000000039,
+          "us_per_shot": 20.75630000000004,
+          "prediction_sha256": "692a8fe14a1b8238d8c909dee7597c561701932f440b54ac2b11701cbc2d0a4c"
+        },
+        "batch": {
+          "errors": 1,
+          "setup_s": 0.002035957993939519,
+          "decode_cpu_s": 0.19747100000000017,
+          "us_per_shot": 19.747100000000017,
+          "prediction_sha256": "692a8fe14a1b8238d8c909dee7597c561701932f440b54ac2b11701cbc2d0a4c"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-published-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10260,
+      "circuit_sha256": "1b12bd10de1fe0393c5706c3269c6026a3a9c9dc1e28eb928c28dcd9fc9bbd5f",
+      "syndrome_sha256": "882a9c95c67aad3db39aad563bc0d45412c78a2791392de9b25700d55d70ab3d",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 37,
+          "setup_s": 0.0016130830626934767,
+          "decode_cpu_s": 26.690915000000018,
+          "us_per_shot": 2669.091500000002,
+          "prediction_sha256": "589f610e8003d4c2cfd2c9a400e3442dc8030bcf12933eca233d49f219fbd25e"
+        },
+        "scalar": {
+          "errors": 7,
+          "setup_s": 0.0035917500499635935,
+          "decode_cpu_s": 0.6581639999999993,
+          "us_per_shot": 65.81639999999993,
+          "prediction_sha256": "3ff09bf8051dd53fd14785e80297e4e0c85e6fa5daa0a5e309a4329167343345"
+        },
+        "batch": {
+          "errors": 7,
+          "setup_s": 0.00436500005889684,
+          "decode_cpu_s": 0.46364799999999917,
+          "us_per_shot": 46.36479999999992,
+          "prediction_sha256": "3ff09bf8051dd53fd14785e80297e4e0c85e6fa5daa0a5e309a4329167343345"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-t7-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10260,
+      "circuit_sha256": "748300055052a70563f571cbb68ca38487f2298cd8ca0c8377025a46ebda8685",
+      "syndrome_sha256": "92157364f4c8d504ee4e068444355f5d93f1c2aeb07df83a1d31ee2f6e4cf164",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 0,
+          "setup_s": 0.0015238749329000711,
+          "decode_cpu_s": 17.10445799999991,
+          "us_per_shot": 1710.4457999999906,
+          "prediction_sha256": "140fc0a0e8d97b2f57a68d781fc1212ba576c65e45546d42fd3e03e40d315a08"
+        },
+        "scalar": {
+          "errors": 1,
+          "setup_s": 0.001927332952618599,
+          "decode_cpu_s": 0.25840900000000033,
+          "us_per_shot": 25.840900000000033,
+          "prediction_sha256": "309bca3ad4b85e82873d6dfbd0719178fc01e839eade878d7577c83787b37026"
+        },
+        "batch": {
+          "errors": 1,
+          "setup_s": 0.0020415419712662697,
+          "decode_cpu_s": 0.20751200000000125,
+          "us_per_shot": 20.751200000000125,
+          "prediction_sha256": "309bca3ad4b85e82873d6dfbd0719178fc01e839eade878d7577c83787b37026"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-t7-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10260,
+      "circuit_sha256": "ab62bb2e25fcd189efd623c7450a39d99eb53672e48ba91659944b1948f62c28",
+      "syndrome_sha256": "1874a677a484cba21af929e1f3c3567bd8c255412a10207648d132d610bd2d93",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 44,
+          "setup_s": 0.011180832982063293,
+          "decode_cpu_s": 28.94554200000016,
+          "us_per_shot": 2894.554200000016,
+          "prediction_sha256": "77551668b4626d14121d6f22439880983877004802541d5a1b30ce053cbb5d88"
+        },
+        "scalar": {
+          "errors": 13,
+          "setup_s": 0.0019592910539358854,
+          "decode_cpu_s": 0.6996660000000006,
+          "us_per_shot": 69.96660000000006,
+          "prediction_sha256": "3d26b053f273ac08ae938fe02364f5c14490ea0529d665ab9d750365f3fe1eea"
+        },
+        "batch": {
+          "errors": 13,
+          "setup_s": 0.0036454169312492013,
+          "decode_cpu_s": 0.51685599999999,
+          "us_per_shot": 51.685599999999,
+          "prediction_sha256": "3d26b053f273ac08ae938fe02364f5c14490ea0529d665ab9d750365f3fe1eea"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-t9-r4-p0.001.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10116,
+      "circuit_sha256": "66d3d0c33571d79a14c40ae627e5a74f36522b980fadb118613af139619221d2",
+      "syndrome_sha256": "fe7879dd66ad24434c4f8db98e04e6a407299bfb9b6d4eaa108e2146549632fd",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 13,
+          "setup_s": 0.003038708004169166,
+          "decode_cpu_s": 19.939243999999917,
+          "us_per_shot": 1993.9243999999917,
+          "prediction_sha256": "14deeae4311d0daeb96fd20194fe10a4af8ec3432f272d5de76010642626cf45"
+        },
+        "scalar": {
+          "errors": 3,
+          "setup_s": 0.0017755829030647874,
+          "decode_cpu_s": 0.35229400000000055,
+          "us_per_shot": 35.229400000000055,
+          "prediction_sha256": "c2c4c1216925e1dffa80e6fad6e332fe133a9b49ed6a8929683d858fd906c99a"
+        },
+        "batch": {
+          "errors": 3,
+          "setup_s": 0.0016794160474091768,
+          "decode_cpu_s": 0.24771399999998778,
+          "us_per_shot": 24.771399999998778,
+          "prediction_sha256": "c2c4c1216925e1dffa80e6fad6e332fe133a9b49ed6a8929683d858fd906c99a"
+        }
+      }
+    },
+    {
+      "circuit": "ibm72-t9-r4-p0.002.stim",
+      "shots": 10000,
+      "detectors": 288,
+      "observables": 12,
+      "mechanisms": 10116,
+      "circuit_sha256": "948fa218af9395db43d8695d382dd52723ee26619838ae7c7ed6da37a6e945c7",
+      "syndrome_sha256": "fadb3ae9bd69aec96af0384bad700719f729b7a708aefbaf31dc118887cb897c",
+      "scalar_batch_disagreements": 0,
+      "arms": {
+        "reference": {
+          "errors": 207,
+          "setup_s": 0.002943625091575086,
+          "decode_cpu_s": 34.261694000000034,
+          "us_per_shot": 3426.169400000004,
+          "prediction_sha256": "84d8ed64328c7fcf7d65ed365f595ee5c447892dc2e4ed669d34376a8bedbb07"
+        },
+        "scalar": {
+          "errors": 55,
+          "setup_s": 0.0016527080442756414,
+          "decode_cpu_s": 1.1233800000000116,
+          "us_per_shot": 112.33800000000116,
+          "prediction_sha256": "98eba2898754368524c84f70f7d78b39e7543e5b5d9bbb32b5e2c0714de5d2da"
+        },
+        "batch": {
+          "errors": 55,
+          "setup_s": 0.0018440830754116178,
+          "decode_cpu_s": 1.0785649999999976,
+          "us_per_shot": 107.85649999999974,
+          "prediction_sha256": "98eba2898754368524c84f70f7d78b39e7543e5b5d9bbb32b5e2c0714de5d2da"
+        }
+      }
+    }
+  ]
+}
