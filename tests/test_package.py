@@ -106,7 +106,7 @@ class IndependentCheckerTests(unittest.TestCase):
         import tempfile
 
         spec = importlib.util.spec_from_file_location(
-            "cert_check", ROOT / "verify_circuit_cert.py"
+            "cert_check", ROOT / "verification/verify_circuits.py"
         )
         checker = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(checker)
@@ -140,7 +140,7 @@ class IndependentCheckerTests(unittest.TestCase):
     def test_checker_has_no_local_imports(self):
         import ast
 
-        script = (ROOT / "verify_circuit_cert.py").read_text()
+        script = (ROOT / "verification/verify_circuits.py").read_text()
         self.assertLess(len(script.splitlines()), 150)
         imports = set()
         for node in ast.walk(ast.parse(script)):

@@ -7,13 +7,13 @@ Weight-six two-block quantum LDPC (qLDPC) memories—including bivariate bicycle
 1. **The $(3,3)$ CNOT parity barrier and hook collapse.** Every universal shift-homogeneous CNOT schedule for a $(3,3)$ code requires $T_{\text{CNOT}} \ge 7$ ticks (`ParityBarrier.no_symmetric_3_3_depth_6`), forcing an idle CNOT slot per round. Worse, serialized ($T = 12$) or unscreened schedules let mid-check ancilla faults propagate into weight-2 or weight-3 data errors, collapsing static distance $d = 6$ to circuit distance $d_{\text{circ}} = 4$.
 2. **Decode latency and quantum degeneracy traps.** On circuit-level detector error models (DEMs) with $M = 7{,}784\text{–}67{,}752$ mechanisms, Python/Cython `ldpc.BpOsdDecoder` (`OSD-CS`) requires $42\text{–}2{,}219\text{ ms/shot}$, while C++17 flooding `BP+OSD-CS` requires $0.8\text{–}30\text{ ms/shot}$ and degrades when $3 + 3 = 6$ degeneracy ties stall message passing.
 
-`zero-idle-qldpc` pairs an asymmetric $(4,2)$ and non-abelian two-block group-algebra (`2BGA`) circuit synthesizer with `SpaceTimeDecoder`, a zero-allocation C++17 DEM decoder combining Lean-certified 1-/2-/3-fault fast paths with active-conflict `OSD`. All four core algebraic, scheduling, hook-equivalence, and certificate modules (`26` headline theorems & schedule witnesses, `215` proved lemmas total) compile in `< 15 s` in Lean 4 (`v4.36.0`, zero Mathlib dependencies, `0` `sorry`s), and a `149`-line (`< 150`-line) standalone `Stim` script (`verify_circuit_cert.py`) plus `verify_distance_bounds.py` independently check every circuit.
+`zero-idle-qldpc` pairs an asymmetric $(4,2)$ and non-abelian two-block group-algebra (`2BGA`) circuit synthesizer with `SpaceTimeDecoder`, a zero-allocation C++17 DEM decoder combining Lean-certified 1-/2-/3-fault fast paths with active-conflict `OSD`. All four core algebraic, scheduling, hook-equivalence, and certificate modules (`26` headline theorems & schedule witnesses, `215` proved lemmas total) compile in `< 15 s` in Lean 4 (`v4.36.0`, zero Mathlib dependencies, `0` `sorry`s), and a `149`-line (`< 150`-line) standalone `Stim` script (`verification/verify_circuits.py`) plus `verification/verify_distances.py` independently check every circuit.
 
-![Multi-p logical error rate waterfall](../plots/waterfall_ler.svg)
-*Figure 1 (`plots/waterfall_ler.svg`): **Panel A:** 4-round Z-memory frame error rate across $p \in [0.05\%, 0.3\%]$ for zero-idle $(4,2)$ $T=6$ (`[[56,6,6]]`, `[[84,8,6]]`, `[[96,8,6]]`) and non-abelian `[[60,8,6]]@T=7` ($O(p^3)$, $d_{\text{circ}} = 6$) vs $T=12$ two-phase baselines and canonical $\mathbb{Z}_{30}$ hook collapse ($O(p^2)$, $d_{\text{circ}} = 4$). **Panel B:** Drop-in decoding on identical `Stim` syndromes, including IBM's `[[72,12,6]]` and `[[144,12,12]]` Gross codes.*
+![Multi-p logical error rate waterfall](figures/waterfall_ler.svg)
+*Figure 1 (`docs/figures/waterfall_ler.svg`): **Panel A:** 4-round Z-memory frame error rate across $p \in [0.05\%, 0.3\%]$ for zero-idle $(4,2)$ $T=6$ (`[[56,6,6]]`, `[[84,8,6]]`, `[[96,8,6]]`) and non-abelian `[[60,8,6]]@T=7` ($O(p^3)$, $d_{\text{circ}} = 6$) vs $T=12$ two-phase baselines and canonical $\mathbb{Z}_{30}$ hook collapse ($O(p^2)$, $d_{\text{circ}} = 4$). **Panel B:** Drop-in decoding on identical `Stim` syndromes, including IBM's `[[72,12,6]]` and `[[144,12,12]]` Gross codes.*
 
-![Single-shot decode latency vs logical error rate Pareto frontier](../plots/latency_accuracy_pareto.svg)
-*Figure 2 (`plots/latency_accuracy_pareto.svg`): Single-shot ($N=1$ scalar) CPU latency vs 4-round frame error rate at $p = 0.002$. All 4-round circuits—including IBM's `[[72,12,6]]` and `[[144,12,12]]` Gross codes—average $43\text{–}177\ \mu\text{s/shot}$ of single-thread CPU time (total process CPU time ÷ shots). The shaded $250\ \mu\text{s}$ and $1{,}000\ \mu\text{s}$ lines are assumed reference budgets, not measured hardware timing contracts; per-shot wall-clock deadline compliance has not been established.*
+![Single-shot decode latency vs logical error rate Pareto frontier](figures/latency_accuracy_pareto.svg)
+*Figure 2 (`docs/figures/latency_accuracy_pareto.svg`): Single-shot ($N=1$ scalar) CPU latency vs 4-round frame error rate at $p = 0.002$. All 4-round circuits—including IBM's `[[72,12,6]]` and `[[144,12,12]]` Gross codes—average $43\text{–}177\ \mu\text{s/shot}$ of single-thread CPU time (total process CPU time ÷ shots). The shaded $250\ \mu\text{s}$ and $1{,}000\ \mu\text{s}$ lines are assumed reference budgets, not measured hardware timing contracts; per-shot wall-clock deadline compliance has not been established.*
 
 ### Paired 10,000-Shot Benchmark on Exported `.stim` Circuits
 
@@ -77,13 +77,13 @@ In blind review, two referees exhibited a 4-detector, 4-mechanism oracle (`tests
 
 ### Certified Paths 1–3 + Symmetry-Safe BP + Active-Conflict OSD
 
-`src/spacetime_decoder.cpp` runs with **zero per-shot heap allocations** (`tests/native.cpp`) in three stages:
+`cpp/src/spacetime_decoder.cpp` runs with **zero per-shot heap allocations** (`tests/native.cpp`) in three stages:
 
 1. **Lean-Certified 1-/2-/3-Fault Global MAP Paths (`CertifiedDecoder.lean`).** Using sorted minimum LLRs $w_{(0)} \le w_{(1)} \le w_{(2)} \le w_{(3)}$ (`pair_floor`, `triple_floor`, `four_floor`, proved lower bounds via `kSmallestSum_le_subsetWeight`):
    - **Path 1 (`path1_certified_map`):** O(1) SplitMix64 hash lookup of $s$, certified optimal if $c^* < \text{pair\_floor}$ with unique observable.
    - **Path 2 (`pair_anchor_complete`, `path2_certified_map`):** Scans $m_1 \in \text{adj}(d_0)$ at a fired detector $d_0 \in s$ and hashes $s \oplus \text{col}(m_1)$; certified optimal if $c^* < \text{triple\_floor}$.
    - **Path 3 (`triple_anchor_pivot_complete`, `path3_certified_map`):** Anchors $a \in \text{adj}(d_{\text{rarest}}(s))$, pivots on the rarest fired bit of $s \oplus \text{col}(a)$, and hashes the complement; certified optimal if $c^* < \text{four\_floor}$. On the `3.0 vs 2.7` witness, `triple_floor = 2.7` blocks $\{m_0\}$ ($3.0 \not< 2.7$) and `four_floor = 5.7` certifies $\{m_1, m_2, m_3\}$ ($2.7 < 5.7$) across all $24/24$ column permutations.
-2. **Local Peel/Beam & Alternating-Direction NEON BP.** Uncertified $\ge 4$-fault syndromes try stack-allocated local RREF (`quick_osd`) and contained-column peeling + width-5 beam (`peel`), then run ARM NEON normalized damped min-sum BP (`src/min_sum.hpp`) with **alternating forward/reverse detector sweeps** (`rev = (it & 1) != 0`) and O(1) hash 2-to-1 triangle contraction.
+2. **Local Peel/Beam & Alternating-Direction NEON BP.** Uncertified $\ge 4$-fault syndromes try stack-allocated local RREF (`quick_osd`) and contained-column peeling + width-5 beam (`peel`), then run ARM NEON normalized damped min-sum BP (`cpp/src/min_sum.hpp`) with **alternating forward/reverse detector sweeps** (`rev = (it & 1) != 0`) and O(1) hash 2-to-1 triangle contraction.
 3. **Incremental Active-Conflict OSD (`run_active_conflict_osd`).** Standard `OSD-CS` reduces all $M$ columns across all $D$ rows and sweeps non-pivot pairs whose pivot representation `comb` often has zero overlap (`comb & piv_sol == 0`) with the active pivot support `piv_sol`. `SpaceTimeDecoder` reduces `s_rem` online as pivots arrive, **stops Gaussian elimination** once `s_rem == 0` and `k_scan_cap` non-pivots are found, and restricts order-2/3 sweeps to `direct_pool` (`comb & piv_sol != 0`) plus 1-step `bridges`. On `n70-r4-p0.002`, this cuts frame errors from `242` (C++ `CS2`) and `32` (`ldpc` `CS2`/`CS7`) to **`16`** at $168.6\ \mu\text{s/shot}$ (`2,481×` faster than `ldpc`); on IBM's `[[72,12,6]]` and `[[144,12,12]]` Gross codes, it achieves `7` vs `37` errors ($65.8\ \mu\text{s}$) and `0/10,000` errors ($177.0\ \mu\text{s}$ at $r=4$; `0` vs `5` at $r=12, p=0.002$).
 
 ---
@@ -98,7 +98,7 @@ cd ..
 
 # 2. Build C++17 library (-Wall -Wextra -Werror), verify 0 scalar heap allocations,
 #    24/24 permutations of 3.0 vs 2.7, standalone 149-line Stim circuit verifier
-#    (verify_circuit_cert.py), exhaustive Z-memory distance bounds (verify_distance_bounds.py,
+#    (verification/verify_circuits.py), exhaustive Z-memory distance bounds (verification/verify_distances.py,
 #    certifying d_Z = 10 on 144-qubit Gross), and quick paired ldpc check:
 make verify
 
@@ -108,4 +108,4 @@ python3 benchmarks/run_waterfall_sweep.py
 python3 benchmarks/render_plots.py
 ```
 
-`verify_circuit_cert.py` imports **zero** code from `zero_idle_qldpc` (enforced by `test_checker_has_no_local_imports`: stdlib + `numpy` + `stim` only, `149` lines), independently checking `H_X @ H_Z.T == 0 mod 2`, degree 6, CNOT collision-freeness, Heisenberg pullback, deterministic DEMs, and constructive `Stim` logical witnesses across all 22 `.stim` files.
+`verification/verify_circuits.py` imports **zero** code from `zero_idle_qldpc` (enforced by `test_checker_has_no_local_imports`: stdlib + `numpy` + `stim` only, `149` lines), independently checking `H_X @ H_Z.T == 0 mod 2`, degree 6, CNOT collision-freeness, Heisenberg pullback, deterministic DEMs, and constructive `Stim` logical witnesses across all 22 `.stim` files.

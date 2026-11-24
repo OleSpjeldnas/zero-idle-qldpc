@@ -1,7 +1,10 @@
 /build/
+.venv
 .venv/
 __pycache__/
 *.pyc
+*.egg-info/
+python/*.egg-info/
 .ruff_cache/
 /proofs/.lake/
 /benchmarks/results/*.partial.json

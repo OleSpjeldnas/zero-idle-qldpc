@@ -4,14 +4,15 @@ ELAN_LAKE := $(HOME)/.elan/bin/lake
 LAKE ?= $(if $(wildcard $(ELAN_LAKE)),$(ELAN_LAKE),lake)
 export PYTHONPATH := $(CURDIR)/python
 CXXFLAGS ?= -O3
-FLAGS := -std=c++17 -Wall -Wextra -Werror -Iinclude
-SOURCES := $(wildcard src/*.cpp)
+FLAGS := -std=c++17 -Wall -Wextra -Werror -Icpp/include
+SOURCES := $(wildcard cpp/src/*.cpp)
+HEADERS := $(wildcard cpp/include/qldpc/*.h cpp/include/qldpc/*.hpp cpp/src/*.hpp)
 
-.PHONY: build proofs test verify benchmark-quick benchmark-full plots export
+.PHONY: build proofs test verify benchmark-quick benchmark-full tail-latency figures export
 
 build: build/libqldpc.so
 
-build/libqldpc.so: $(SOURCES) $(wildcard include/qldpc/*.h include/qldpc/*.hpp src/*.hpp)
+build/libqldpc.so: $(SOURCES) $(HEADERS)
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) $(FLAGS) -shared -fPIC $(SOURCES) -o $@
 
@@ -25,15 +26,15 @@ proofs:
 		echo "Note: Lean 4 (lake) not found in PATH; skipping formal proof build."; \
 	fi
 
-build/native-test: tests/native.cpp $(SOURCES) $(wildcard include/qldpc/* src/*.hpp)
+build/native-test: tests/native.cpp $(SOURCES) $(HEADERS)
 	mkdir -p build
 	$(CXX) $(CXXFLAGS) $(FLAGS) tests/native.cpp $(SOURCES) -o $@
 
 test: build build/native-test
 	./build/native-test
 	$(PYTHON) -m unittest discover -s tests
-	$(PYTHON) verify_circuit_cert.py
-	$(PYTHON) verify_distance_bounds.py
+	$(PYTHON) verification/verify_circuits.py
+	$(PYTHON) verification/verify_distances.py
 
 benchmark-quick: build
 	$(PYTHON) benchmarks/run_external_benchmark.py --quick
@@ -41,7 +42,10 @@ benchmark-quick: build
 benchmark-full: build
 	$(PYTHON) benchmarks/run_external_benchmark.py --full --resume
 
-plots:
-	$(PYTHON) benchmarks/render_plots.py --input benchmarks/results/waterfall_results.json --plots-dir plots
+tail-latency: build
+	$(PYTHON) benchmarks/measure_tail_latency.py
+
+figures: build
+	$(PYTHON) benchmarks/render_plots.py --input benchmarks/results/waterfall_results.json --plots-dir docs/figures
 
 verify: proofs test benchmark-quick

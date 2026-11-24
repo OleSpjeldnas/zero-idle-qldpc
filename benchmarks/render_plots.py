@@ -788,8 +788,8 @@ def main() -> None:
         "--out-dir",
         dest="plots_dir",
         type=Path,
-        default=REPO_ROOT / "plots",
-        help="Output plots directory",
+        default=REPO_ROOT / "docs" / "figures",
+        help="Output figures directory",
     )
     args = parser.parse_args()
 

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zero-idle-qldpc"
+version = "0.1.0"
+description = "Zero-idle weight-6 two-block qLDPC memory synthesis and microsecond certified space-time decoding"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.11",
+    "stim>=1.13",
+    "ldpc>=2.2",
+    "matplotlib>=3.7",
+]
+
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]

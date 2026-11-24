@@ -11,9 +11,9 @@ from pathlib import Path
 
 import stim
 
-from certificates.gross_distance import excludes_lifts, spatial_nines
+from gross_distance import excludes_lifts, spatial_nines
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def project(dem, period):
@@ -159,7 +159,7 @@ def check_physical_witness(circuit, faults):
 
 
 if __name__ == "__main__":
-    witnesses = json.loads((ROOT / "certificates/faults.json").read_text())
+    witnesses = json.loads((ROOT / "verification/faults.json").read_text())
     for path in sorted((ROOT / "circuits").glob("*.stim")):
         name = path.name.split("-r")[0]
         c = stim.Circuit.from_file(path)

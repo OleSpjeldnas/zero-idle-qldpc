@@ -1,0 +1,96 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "metric": "single_shot_wall_clock_perf_counter_ns",
+  "rows": [
+    {
+      "circuit": "n84-r4-p0.001.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 19.8,
+      "p50_wall_us": 15.73,
+      "p90_wall_us": 38.83,
+      "p99_wall_us": 70.71,
+      "p999_wall_us": 194.71
+    },
+    {
+      "circuit": "n84-r4-p0.002.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 53.3,
+      "p50_wall_us": 39.04,
+      "p90_wall_us": 65.88,
+      "p99_wall_us": 371.54,
+      "p999_wall_us": 1151.01
+    },
+    {
+      "circuit": "n96-r4-p0.001.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 24.15,
+      "p50_wall_us": 24.0,
+      "p90_wall_us": 42.54,
+      "p99_wall_us": 80.31,
+      "p999_wall_us": 248.81
+    },
+    {
+      "circuit": "n96-r4-p0.002.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 66.42,
+      "p50_wall_us": 44.29,
+      "p90_wall_us": 82.13,
+      "p99_wall_us": 599.65,
+      "p999_wall_us": 1405.21
+    },
+    {
+      "circuit": "ibm72-published-r4-p0.001.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 18.46,
+      "p50_wall_us": 8.08,
+      "p90_wall_us": 40.12,
+      "p99_wall_us": 88.38,
+      "p999_wall_us": 197.76
+    },
+    {
+      "circuit": "ibm72-published-r4-p0.002.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 45.88,
+      "p50_wall_us": 34.38,
+      "p90_wall_us": 63.29,
+      "p99_wall_us": 272.3,
+      "p999_wall_us": 1205.94
+    },
+    {
+      "circuit": "ibm144-published-r4-p0.001.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 36.88,
+      "p50_wall_us": 33.04,
+      "p90_wall_us": 57.92,
+      "p99_wall_us": 157.3,
+      "p999_wall_us": 386.84
+    },
+    {
+      "circuit": "ibm144-published-r4-p0.002.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 141.92,
+      "p50_wall_us": 71.5,
+      "p90_wall_us": 327.79,
+      "p99_wall_us": 1759.52,
+      "p999_wall_us": 2295.83
+    },
+    {
+      "circuit": "ibm144-published-r12-p0.001.stim",
+      "shots": 10000,
+      "seed": 424242,
+      "mean_wall_us": 197.18,
+      "p50_wall_us": 124.52,
+      "p90_wall_us": 461.99,
+      "p99_wall_us": 792.59,
+      "p999_wall_us": 5046.82
+    }
+  ]
+}

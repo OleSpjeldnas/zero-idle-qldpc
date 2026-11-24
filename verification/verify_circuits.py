@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 import stim
 
-ROOT = Path(__file__).resolve().parent / 'circuits'
+ROOT = Path(__file__).resolve().parents[1] / 'circuits'
 
 def require(condition, message):
     if not condition:
